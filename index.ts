@@ -231,6 +231,6 @@ other.height = 500;
 console.log( vertex_source );
 
 const game = new Game();
-const paddle = new Paddle( canvas );
+const paddle = new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) );
 game.addComponent( paddle );
 game.start();

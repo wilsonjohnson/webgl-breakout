@@ -20,7 +20,7 @@ export class Paddle extends Component {
     context.fillStyle = 'black';
     context.fillRect( 0, 0, this.canvas.width, this.canvas.height );
 
-    vec2.add( this.position, this.position, vec2.fromValues( 0.5, 0.5 ) );
+    vec2.add( this.position, this.position, vec2.random(vec2.create()) );
     super.update( delta );
   }
 }
