@@ -1,15 +1,15 @@
 import { Component } from './';
 import { vec2, mat4 } from 'gl-matrix';
 
-export class RenderComponent2d extends Component {
+export class RenderComponentWebGL extends Component {
     constructor(
 		private canvas: HTMLCanvasElement,
-		private render: (canvas: CanvasRenderingContext2D) => void
+		private render: (canvas: WebGL2RenderingContext) => void
 	) {
 		super();
 	}
 
     public update(delta: number, transform?: mat4) {
-        this.render(this.canvas.getContext('2d'));
+        this.render(this.canvas.getContext('webgl2'));
     }
 }

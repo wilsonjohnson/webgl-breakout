@@ -16,11 +16,7 @@ export class Paddle extends Component {
   }
 
   public update( delta: number, transform?: mat4 ) {
-    const context = this.canvas.getContext('2d') as CanvasRenderingContext2D;
-    context.fillStyle = 'black';
-    context.fillRect( 0, 0, this.canvas.width, this.canvas.height );
-
-    vec2.add( this.position, this.position, vec2.random(vec2.create()) );
+    vec2.add( this.position, this.position, vec2.scale(vec2.create(), vec2.random(vec2.create()), 1) );
     super.update( delta );
   }
 }

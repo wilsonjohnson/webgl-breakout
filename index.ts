@@ -1,12 +1,11 @@
 // Import stylesheets
 import './style.css';
 import {mat4, vec2, vec4} from 'gl-matrix';
-import {Game, Paddle} from './game';
+import {Game, Paddle, Scene} from './game';
 import {QuadTree} from './quadtree';
 
 const {floor} = Math;
 // import vertex_source from './vertex_shader.glsl';
-// test
 
 const vertex_source = `
 precision mediump float;
@@ -232,6 +231,23 @@ other.height = 500;
 console.log( vertex_source );
 
 const game = new Game();
+const scene = new Scene( canvas );
+game.addComponent( scene );
 const paddle = new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) );
-game.addComponent( paddle );
+scene.addComponent( paddle );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
 game.start();
