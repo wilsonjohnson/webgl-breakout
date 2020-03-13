@@ -1,7 +1,7 @@
 // Import stylesheets
 import './style.css';
 import {mat4, vec2, vec4} from 'gl-matrix';
-import {Game, Paddle, Scene} from './game';
+import {Game} from './game/index';
 import {QuadTree} from './quadtree';
 
 const {floor} = Math;

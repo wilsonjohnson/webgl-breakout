@@ -1,13 +1,13 @@
-import {Component, RenderComponent2d} from './index';
+import {RenderComponent2d, Actor} from './index';
 import {vec2, mat4} from 'gl-matrix';
 
-export class Paddle extends Component {
+export class Paddle extends Actor {
 	velocity: vec2 = vec2.create();
   constructor (
     private canvas: HTMLCanvasElement,
-    private position: vec2 = vec2.create()
+    position: vec2 = vec2.create()
   ) {
-    super();
+    super( position );
     const renderComponent = new RenderComponent2d( canvas, context => {
       context.fillStyle = 'white';
       context.fillRect( this.position[0] - 50, this.position[1], 100, 20 );

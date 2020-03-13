@@ -1,4 +1,4 @@
-import {Component, Scheduler, Scene, Paddle } from './index'
+import {Component, Scheduler, Scene, Paddle, Ball } from './index'
 import { vec2 } from 'gl-matrix';
 
 export class Game extends Component {
@@ -12,6 +12,8 @@ export class Game extends Component {
 	this.addComponent( scene );
 	const paddle = new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height - 70 ) );
 	scene.addComponent( paddle );
+	const ball = new Ball( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2 ) );
+	scene.addComponent( ball );
   }
 
   public start() {
