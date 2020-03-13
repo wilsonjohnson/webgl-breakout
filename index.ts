@@ -230,24 +230,6 @@ other.width = 500;
 other.height = 500;
 console.log( vertex_source );
 
-const game = new Game();
-const scene = new Scene( canvas );
-game.addComponent( scene );
-const paddle = new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) );
-scene.addComponent( paddle );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
-scene.addComponent( new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height / 2) ) );
+const game = new Game( canvas );
+
 game.start();

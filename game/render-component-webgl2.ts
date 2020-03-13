@@ -1,4 +1,4 @@
-import { Component } from './';
+import { Component } from './index';
 import { vec2, mat4 } from 'gl-matrix';
 
 export class RenderComponentWebGL extends Component {

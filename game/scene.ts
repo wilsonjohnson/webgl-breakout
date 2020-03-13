@@ -1,4 +1,4 @@
-import { Component, RenderComponent2d } from './';
+import { Component, RenderComponent2d } from './index';
 
 export class Scene extends Component {
 	constructor(

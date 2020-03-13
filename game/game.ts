@@ -1,12 +1,17 @@
-import {Component, Scheduler} from './'
+import {Component, Scheduler, Scene, Paddle } from './index'
+import { vec2 } from 'gl-matrix';
 
 export class Game extends Component {
   
   private scheduler: Scheduler = new Scheduler();
   private run = false;
 
-  constructor() {
-    super()
+  constructor( private canvas: HTMLCanvasElement ) {
+	super()
+	const scene = new Scene( canvas );
+	this.addComponent( scene );
+	const paddle = new Paddle( canvas, vec2.fromValues( canvas.width / 2, canvas.height - 70 ) );
+	scene.addComponent( paddle );
   }
 
   public start() {
