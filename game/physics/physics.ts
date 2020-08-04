@@ -54,8 +54,8 @@ export class Physics extends Component {
 				mins[1] = angle;
 				selecteds = []
 			}
-			second = min;
-			min = angle;
+			// second = min;
+			// min = angle;
 			closest = shifted;
 		}
 		const dot = vec2.dot( closest, box2circleNormal );
